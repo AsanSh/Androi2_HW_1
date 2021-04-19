@@ -34,11 +34,12 @@ public class ProfileFragment extends Fragment {
         profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
         imageView = root.findViewById(R.id.imageView);
-        imageView.setOnClickListener(v ->{
+        imageView.setOnClickListener(v -> {
             imagePicker();
         });
         return root;
-}
+    }
+
     private void imagePicker() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -48,9 +49,9 @@ public class ProfileFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-       if (requestCode == IMAGE_PICKER_CODE && resultCode == RESULT_OK && data != null) {
-           imageUri = data.getData();
-           imageView.setImageURI(imageUri);
-       }
+        if (requestCode == IMAGE_PICKER_CODE && resultCode == RESULT_OK && data != null) {
+            imageUri = data.getData();
+            imageView.setImageURI(imageUri);
+        }
     }
 }

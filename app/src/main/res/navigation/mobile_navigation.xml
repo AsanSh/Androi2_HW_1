@@ -34,6 +34,11 @@
         android:name="com.asan.android2.FormFragment"
         android:label="fragment_form"
         tools:layout="@layout/fragment_form" />
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="com.asan.android2.ui.onboard.BoardFragment"
+        android:label="fragment_board"
+        tools:layout="@layout/fragment_board" />
 
 
 </navigation>
